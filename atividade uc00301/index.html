@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Desconto para loja virtual</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="title">Calculadora de desconto online</div>
+    <form class="" action="./pag/cliente.php" method="post">
+
+        <div>
+            <p class="Pergunta">Qual o nome do cliente?</p>
+            <input type="text" id="nome" name="nome">
+
+        </div>
+
+        <div>
+            <p class="Pergunta">Digite o valor da compra</p>
+            <input type="text" id="valorcompra" name="valorcompra">
+
+        </div>
+
+        <div>
+            <label for="cliente">O clinte é comum ou VIP?</label><br>
+            <select id="cliente" name="cliente_escolhido">
+            <option value="comum">comum</option>
+            <option value="vip">VIP</option>
+            </select>
+
+        </div>
+
+          <input type="submit" class="button" value="calcular desconto"><br>
+
+    </form>
+</body>
+
+</html>
