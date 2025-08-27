@@ -1,18 +1,18 @@
 <?php
 
-$nome = filter_input(INPUT_POST,"nome");
-$cliente_escolhido = filter_input(INPUT_POST,"cliente_escolhido");
+$nome = filter_input(INPUT_POST, "nome");
+$cliente_escolhido = filter_input(INPUT_POST, "cliente_escolhido");
 $valorcompra = filter_input(INPUT_POST, "valorcompra", filter: FILTER_VALIDATE_FLOAT);
-$valorpagar = filter_input(INPUT_POST,"valorpagar", filter: FILTER_VALIDATE_FLOAT);
+$valorpagar = filter_input(INPUT_POST, "valorpagar", filter: FILTER_VALIDATE_FLOAT);
 
 $desconto = $valorcompra * 0.10;
 
 if ($cliente_escolhido == "comum") {
-    $mensagem = $nome . " o valor a se pagar é de " . $valorcompra ;
-} 
+    $mensagem = $nome . " o valor a se pagar é de " . $valorcompra;
+}
 if ($cliente_escolhido == "vip") {
 
-    $valorpagar = $valorcompra - $desconto ;
+    $valorpagar = $valorcompra - $desconto;
     $mensagem = $nome . " o valor a se pagar vai ser de " . $valorpagar . " o seu desconto foi de " . $desconto;
 }
 
@@ -36,11 +36,13 @@ if ($cliente_escolhido == "vip") {
 
 <body>
     <h1>Valor da compra</h1>
-    <div id="resultado">
+    <div class="container">
+        <div class="resultado">
 
-        <?= $mensagem; ?>
-        
+            <?= $mensagem; ?>
 
+
+        </div>
     </div>
 </body>
 
